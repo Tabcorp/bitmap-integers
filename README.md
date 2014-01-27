@@ -52,13 +52,13 @@ You can pass in an array of booleans in BE form
 
 You can get an integer array from a value
 ```coffee
-  bitmap.toIntegerArray(1) = [1]     = 1
-  bitmap.toIntegerArray(2) = [2]     = 2
-  bitmap.toIntegerArray(3) = [1,2]   = 3
-  bitmap.toIntegerArray(4) = [3]     = 4
-  bitmap.toIntegerArray(5) = [1,3]   = 5
-  bitmap.toIntegerArray(6) = [2,3]   = 6
-  bitmap.toIntegerArray(7) = [1,2,3] = 7
+  bitmap.toIntegerArray(1) = [1]    
+  bitmap.toIntegerArray(2) = [2]    
+  bitmap.toIntegerArray(3) = [1,2]  
+  bitmap.toIntegerArray(4) = [3]    
+  bitmap.toIntegerArray(5) = [1,3]  
+  bitmap.toIntegerArray(6) = [2,3]  
+  bitmap.toIntegerArray(7) = [1,2,3]
 ```
 
 ### Little endian boolean array
