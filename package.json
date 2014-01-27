@@ -1,0 +1,26 @@
+{
+  "name": "bitmap-integers",
+  "version": "0.0.1",
+  "description": "Convert integer and boolean arrays to bitmap integers",
+  "author": "Tabcorp Digital Technology Team",
+  "license": "Copyright Tabcorp Pty Ltd 2013",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TabDigital/bitmap-integers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TabDigital/bitmap-integers/issues"
+  },
+  "main": "src/bitmap.coffee",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "devDependencies": {
+    "should": "~2.1.1",
+    "mocha": "~1.15.1"
+  },
+  "dependencies": {
+    "coffee-script": "~1.6.3",
+    "lodash": "~2.4.1"
+  }
+}
