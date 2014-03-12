@@ -20,7 +20,7 @@
     "mocha": "~1.15.1"
   },
   "dependencies": {
-    "coffee-script": "~1.6.3",
+    "coffee-script": "~1.7.1",
     "lodash": "~2.4.1"
   }
 }
