@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/TabDigital/bitmap-integers/issues"
   },
-  "main": "src/bitmap.coffee",
+  "main": "src/main.js",
   "scripts": {
     "test": "node_modules/.bin/mocha"
   },
