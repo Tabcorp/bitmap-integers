@@ -2,6 +2,10 @@
 
 Small utility module to convert between integer representations of bitmaps and arrays
 
+[![Build Status](https://travis-ci.org/TabDigital/bitmap-integers.svg?branch=master)](https://travis-ci.org/TabDigital/bitmap-integers)
+
+[![NPM](https://nodei.co/npm/bitmap-integers.svg?downloads=true)](https://nodei.co/npm/bitmap-integers/)
+
 # using in your project
 ```coffee
   bitmap = require 'bitmap-integers'
