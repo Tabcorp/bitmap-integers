@@ -4,6 +4,9 @@ Small utility module to convert between integer representations of bitmaps and a
 
 [![Build Status](https://travis-ci.org/TabDigital/bitmap-integers.svg?branch=master)](https://travis-ci.org/TabDigital/bitmap-integers)
 
+[![Dependency Status](https://david-dm.org/TabDigital/bitmap-integers.png?theme=shields.io)](https://david-dm.org/TabDigital/bitmap-integers) 
+[![devDependency Status](https://david-dm.org/TabDigital/bitmap-integers/dev-status.png?theme=shields.io)](https://david-dm.org/TabDigital/bitmap-integers#info=devDependencies)
+
 [![NPM](https://nodei.co/npm/bitmap-integers.svg?downloads=true)](https://nodei.co/npm/bitmap-integers/)
 
 # using in your project
