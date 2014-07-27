@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Convert integer and boolean arrays to bitmap integers",
   "author": "Tabcorp Digital Technology Team",
-  "license": "Copyright Tabcorp Pty Ltd 2013",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/TabDigital/bitmap-integers.git"
