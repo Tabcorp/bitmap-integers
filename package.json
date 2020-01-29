@@ -6,21 +6,20 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TabDigital/bitmap-integers.git"
+    "url": "https://github.com/Tabcorp/bitmap-integers.git"
   },
   "bugs": {
-    "url": "https://github.com/TabDigital/bitmap-integers/issues"
+    "url": "https://github.com/Tabcorp/bitmap-integers/issues"
   },
-  "main": "src/main.js",
+  "main": "src/bitmap.js",
   "scripts": {
     "test": "node_modules/.bin/mocha"
   },
   "dependencies": {
-    "coffee-script": "~1.7.1",
-    "lodash": "~2.4.1"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
-    "mocha": "~1.20.1",
-    "should": "~4.0.4"
+    "mocha": "^7.0.0",
+    "should": "^13.2.3"
   }
 }
