@@ -5,7 +5,7 @@ Small utility module to convert between integer representations of bitmaps and a
 [![NPM](http://img.shields.io/npm/v/bitmap-integers.svg?style=flat)](https://npmjs.org/package/bitmap-integers)
 [![License](http://img.shields.io/npm/l/bitmap-integers.svg?style=flat)](https://github.com/Tabcorp/bitmap-integers)
 
-[![Build Status](http://img.shields.io/travis/Tabcorp/bitmap-integers.svg?style=flat)](http://travis-ci.org/Tabcorp/bitmap-integers)
+[![Build Status](http://img.shields.io/travis/Tabcorp/bitmap-integers.svg?style=flat)](https://travis-ci.com/Tabcorp/bitmap-integers)
 [![Dependencies](http://img.shields.io/david/Tabcorp/bitmap-integers.svg?style=flat)](https://david-dm.org/Tabcorp/bitmap-integers)
 [![Dev dependencies](http://img.shields.io/david/dev/Tabcorp/bitmap-integers.svg?style=flat)](https://david-dm.org/Tabcorp/bitmap-integers)
 
