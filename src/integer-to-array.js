@@ -1,22 +1,4 @@
-const toIntegerArray = function(value) {
-  return getArray(value, function(result, character, index) {
-    if (character === '1') {
-      return result.push(index + 1);
-    }
-  });
-};
-
-const toBooleanArrayLE = function(value) {
-  return getArray(value, function(result, character, index) {
-    return result.push(character === '1' ? true : false);
-  });
-};
-
-const toBooleanArrayBE = function(value) {
-  return toBooleanArrayLE(value).reverse();
-};
-
-const validNumber = function(value) {
+const validNumber = (value) => {
   if (value <= 0) {
     return false;
   }
@@ -26,17 +8,29 @@ const validNumber = function(value) {
   return true;
 };
 
-const getArray = function(value, callback) {
-  var result;
+const getArray = (value, callback) => {
   if (!validNumber(value)) {
     return [];
   }
-  result = [];
-  Math.floor(value).toString(2).split('').reverse().forEach(function(character, index) {
-    return callback(result, character, index);
-  });
+  const result = [];
+  Math.floor(value).toString(2).split('').reverse()
+    .forEach((character, index) => {
+      callback(result, character, index);
+    });
   return result;
 };
+
+const toIntegerArray = (value) => getArray(value, (result, character, index) => {
+  if (character === '1') {
+    result.push(index + 1);
+  }
+});
+
+const toBooleanArrayLE = (value) => getArray(value, (result, character) => {
+  result.push(character === '1');
+});
+
+const toBooleanArrayBE = (value) => toBooleanArrayLE(value).reverse();
 
 exports.toIntegerArray = toIntegerArray;
 exports.toBooleanArrayLE = toBooleanArrayLE;

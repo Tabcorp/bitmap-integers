@@ -1,57 +1,49 @@
+/* eslint-disable valid-typeof */
+/* eslint-disable no-param-reassign */
 const _ = require('lodash');
 
-const fromIntegerArray = function(integerArray) {
-  return getValue(_.uniq(integerArray), 'number', (function(_this) {
-    return function(bitmap, value, index) {
-      if (value > 0) {
-        return bitmap.value += Math.pow(2, (Math.floor(value)) - 1);
-      }
-    };
-  })(this));
-};
-
-const fromBooleanArrayLE = function(booleanArray) {
-  return getValue(booleanArray, 'boolean', function(bitmap, value, index) {
-    if (value) {
-      return bitmap.value += Math.pow(2, index);
-    }
-  });
-};
-
-const fromBooleanArrayBE = function(booleanArray) {
-  if (booleanArray instanceof Array) {
-    booleanArray.reverse();
-  }
-  return getValue(booleanArray, 'boolean', function(bitmap, value, index) {
-    if (value) {
-      return bitmap.value += Math.pow(2, index);
-    }
-  });
-};
-
-const validArray = function(array, valueType) {
-  var invalidValue;
+const validArray = (array, valueType) => {
   if (!(array instanceof Array)) {
     return false;
   }
-  invalidValue = _(array).find(function(value) {
-    return typeof value !== valueType;
-  });
-  return invalidValue === void 0;
+  return array.findIndex((value) => typeof value !== valueType) < 0;
 };
 
-const getValue = function(array, type, callback) {
-  var bitmap;
+const getValue = (array, type, callback) => {
   if (!validArray(array, type)) {
     return 0;
   }
-  bitmap = {
-    value: 0
+  const bitmap = {
+    value: 1,
   };
-  _(array).forEach(function(value, index) {
-    return callback(bitmap, value, index);
+  bitmap.value = 0;
+  array.forEach((value, index) => {
+    callback(bitmap, value, index);
   });
   return bitmap.value;
+};
+
+const fromIntegerArray = (integerArray) => getValue(_.uniq(integerArray), 'number', (bitmap, value) => {
+  if (value > 0) {
+    bitmap.value += (2 ** (Math.floor(value) - 1));
+  }
+});
+
+const fromBooleanArrayLE = (booleanArray) => getValue(booleanArray, 'boolean', (bitmap, value, index) => {
+  if (value) {
+    bitmap.value += (2 ** index);
+  }
+});
+
+const fromBooleanArrayBE = (booleanArray) => {
+  if (booleanArray instanceof Array) {
+    booleanArray.reverse();
+  }
+  return getValue(booleanArray, 'boolean', (bitmap, value, index) => {
+    if (value) {
+      bitmap.value += (2 ** index);
+    }
+  });
 };
 
 exports.fromIntegerArray = fromIntegerArray;
