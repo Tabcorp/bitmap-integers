@@ -1,6 +1,6 @@
 {
   "name": "bitmap-integers",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Convert integer and boolean arrays to bitmap integers",
   "author": "Tabcorp Digital Technology Team",
   "license": "MIT",
